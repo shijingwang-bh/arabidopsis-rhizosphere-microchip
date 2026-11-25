@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript and identify this data and code release when using these materials."
+type: software
+title: "Arabidopsis rhizosphere microchip data and analysis code"
+version: "2026.11.25"
+repository-code: "https://github.com/shijingwang-bh/arabidopsis-rhizosphere-microchip"
+date-released: 2026-11-25
+authors:
+  - family-names: Wang
+    given-names: Shijing
+  - family-names: Chen
+    given-names: Dengbo
+  - family-names: Liu
+    given-names: Hong
+  - family-names: Ma
+    given-names: Jun
+  - family-names: Fu
+    given-names: Yuming
+abstract: "Data and analysis code associated with An Arabidopsis rhizosphere microchip reveals enhanced early accumulation of Bacillus subtilis under simulated microgravity. This release follows the 25 November 2026 manuscript and supplementary information, including joint BH correction across the four day-7 average inoculation effects on plant growth."

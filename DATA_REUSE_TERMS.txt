@@ -1,0 +1,6 @@
+The data in this package are supplied for scientific verification, peer review,
+and non-commercial research reuse with attribution to the associated article.
+Before public repository release, the corresponding author and Beihang
+University should confirm the final data license and any institutional or
+funder-specific requirements. No personally identifiable or human-subject data
+are included.
