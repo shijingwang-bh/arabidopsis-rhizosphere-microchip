@@ -1,0 +1,13 @@
+Trait,Model term,F,Primary P,HC3 P
+Stem-to-tip root length (mm),Gravity,1.6,0.218,0.0492
+Stem-to-tip root length (mm),Inoculation,0.454,0.507,0.855
+Stem-to-tip root length (mm),Gravity × inoculation,1.37,0.254,0.24
+Root diameter (μm),Gravity,0.223,0.646,0.777
+Root diameter (μm),Inoculation,16.3,0.00197,0.00382
+Root diameter (μm),Gravity × inoculation,0.165,0.692,0.739
+Leaf fresh weight (mg),Gravity,0.0679,0.797,0.915
+Leaf fresh weight (mg),Inoculation,22.2,0.000176,0.00212
+Leaf fresh weight (mg),Gravity × inoculation,0.764,0.394,0.465
+Leaf area (cm²),Gravity,0.946,0.341,0.532
+Leaf area (cm²),Inoculation,1.1,0.306,0.34
+Leaf area (cm²),Gravity × inoculation,1.1,0.305,0.298

@@ -1,0 +1,13 @@
+Contrast,Positive,Negative,Total
+T = J₇ − J₃,4,1,5
+ΔG = G₇ − G₃,0,3,3
+"Uninoculated gravity, day 3",0,0,0
+"Uninoculated gravity, day 7",14,17,31
+"Inoculation, sμg, day 3",59,8,67
+"Inoculation, sμg, day 7",278,134,412
+"Inoculation, 1 g, day 3",21,9,30
+"Inoculation, 1 g, day 7",131,51,182
+"Inoculation day 7 − day 3, sμg",3,3,6
+"Inoculation day 7 − day 3, 1 g",0,1,1
+J₃,0,0,0
+J₇,108,29,137

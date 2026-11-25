@@ -1,0 +1,5 @@
+Trait,Average effect,95% CI,Contrast P,BH q
+Stem-to-tip root length (mm),-2.29,-8.21 to 3.63,0.432,0.432
+Root diameter (μm),40.9,18.5 to 63.4,0.00204,0.00408
+Leaf fresh weight (mg),13.1,6.5 to 19.6,0.000566,0.00226
+Leaf area (cm²),0.0285,-0.03 to 0.087,0.323,0.431

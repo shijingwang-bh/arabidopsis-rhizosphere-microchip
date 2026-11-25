@@ -1,0 +1,9 @@
+GO term,Genes,fgsea NES,CAMERA q,FRY q,Estimated-correlation CAMERA q
+Plastid organization,304,2.82,1.29e-07,0.544,0.908
+Photosynthesis,201,2.69,2.07e-07,0.648,0.908
+Flavonoid biosynthesis,72,-2.72,1.29e-07,0.145,0.908
+Cellular response to hypoxia,234,-2.55,1.29e-07,0.566,0.908
+Detoxification,146,-2.6,1.29e-07,0.195,0.908
+Phenol-containing compound metabolism,60,-1.86,0.0203,0.0405,0.908
+Response to desiccation,23,-2.04,0.00406,0.0455,0.908
+Response to salt,44,-1.98,0.0692,0.0455,0.908
