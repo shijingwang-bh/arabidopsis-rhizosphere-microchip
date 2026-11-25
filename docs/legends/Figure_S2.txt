@@ -1,0 +1,1 @@
+Figure S2. Expression profiles of eight differentially expressed leaf genes in Arabidopsis thaliana (BH q < 0.05). Heatmap colours show row-standardized voom logCPM; adjacent columns show log₂ fold change (sµg minus 1 g) and gene-level BH q. A1–A5 and B1–B4 represent stationary 1-g and simulated-microgravity (sµg) leaf pools, respectively.

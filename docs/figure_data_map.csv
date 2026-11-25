@@ -1,0 +1,21 @@
+figure_or_table,manuscript_section,measurement,data,code,statistical_scope_or_boundary
+1a–c,2.1–2.2; 3.1,Platform design and hardware,assets/platform/design_and_hardware.pdf,code/compose_figures.py,Archived non-data artwork
+2a; S1d,2.3; 3.1–3.2; SM4,Cultivation and pre-inoculation lateral roots,data/observations/phenotype_pre.csv,code/analyse_phenotypes.R; code/plot_platform_panels.R; code/compose_figures.py,Four Welch tests jointly BH
+2b; S2; Table S1,2.7; 3.2; SM2,Eight leaf DEGs,data/rna/; reference/statistics/rna/,code/analyse_RNA.R; code/plot_current_figures.R,"20,449-gene BH family"
+2c,2.7; 3.2; SM2,Leaf RNA PCA,data/rna/; reference/plot_data/rna_pca/,code/analyse_RNA.R; code/plot_current_figures.R,Nine leaf pools; no duplicate supplementary PCA
+2d; S3; Table S2,2.7; 3.2; SM2,GO sets and representative genes,data/rna/GO_membership.csv; reference/plot_data/rna_gene_sets/,code/analyse_RNA.R; code/plot_current_figures.R,"1,705 sets per method; primary and sensitivity outputs distinguished"
+3a; S4,2.4; 3.3; SM1,Experimental fluorescence image plates,assets/microscopy/,code/plot_current_figures.R; code/compose_figures.py,Preserved microscopy pixels and scale bars
+3b,2.4; 3.3,Root-zone RFP trajectories,data/observations/rfp.csv,code/analyse_phenotypes.R; code/plot_current_figures.R,Same three chips per gravity; descriptive mean and SE
+3c,2.4; 2.8; 3.3; SM4,Channel-liquid bacterial concentration,data/observations/bacterial_counts.csv,code/analyse_phenotypes.R; code/plot_current_figures.R,Two day-specific Welch q; separate Type II model P
+3d/e; S5a/b,2.5; 3.4; SM4,Conditioned-medium OD,data/conditioned_medium/,code/extract_OD_workbooks.py; code/analyse_OD.R; code/plot_current_figures.R,Technical wells from pooled preparations; descriptive
+4a,2.6–2.8; 3.5; SM3–SM4,Root-exudate PCA,data/lcms/,code/analyse_LCMS_global.R; code/plot_current_figures.R,41 culture-dish samples; Pareto scaling
+4b; Table S3a,2.8; 3.5; SM4,Global chemical model,data/lcms/,code/analyse_LCMS_global.R; code/plot_current_figures.R,"Seven conditional terms jointly BH; 9,999 Freedman–Lane permutations"
+4c; Table S3b,2.7–2.8; 3.5; SM4,Inoculation response heatmap,reference/plot_data/chemistry_global/,code/analyse_LCMS_global.R; code/plot_current_figures.R,"Complete 3,126-feature family per contrast; 579-row union"
+4d; Table S4,2.8; 3.5; SM4,Temporal interaction T,data/lcms/; reference/plot_data/chemistry_interactions/,code/analyse_LCMS_global.R; code/analyse_LCMS_interactions.R; code/plot_current_figures.R,"T=J7-J3; five responsive features among 3,126"
+5a,3.5; SM4,Day-7 gravity-by-inoculation interaction,reference/plot_data/chemistry_interactions/,code/analyse_LCMS_interactions.R; code/plot_current_figures.R,"137 responsive features among 3,126"
+5b/c,3.5; SM4,Day-7 compound examples,data/lcms/; reference/plot_data/chemistry_interactions/,code/analyse_LCMS_interactions.R; code/plot_current_figures.R,"Original observations, unadjusted 95% CI, full-family q"
+5d/e; Table S5,2.3; 2.8; 3.6; SM4,Growth after seven days of co-culture,data/observations/growth_day7.csv,code/analyse_phenotypes.R; code/plot_current_figures.R,Four average contrasts jointly BH; model-term P separate
+S1a–c,3.1; SM1,Preparation and preliminary imaging,assets/platform/S1_panels_abc.png,code/compose_figures.py,Archived image panels
+S6,3.5; SM4,Uninoculated chemical gravity effects,reference/plot_data/chemistry_gravity/,code/analyse_LCMS_global.R; code/plot_current_figures.R,"3,126 features per contrast; three temporal gravity hits"
+S7,3.5; SM4,Day-3 compound examples,data/lcms/; reference/plot_data/chemistry_global/,code/analyse_LCMS_interactions.R; code/plot_day3_examples.R,Numeric vector redraw; exact submitted raster separately preserved
+Loading simulation,2.1; 3.1,Archived inlet-rate and arrival-time values,data/observations/loading_simulation.csv,code/plot_platform_panels.R,Plots archived values; does not rerun COMSOL

@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "analysis": "Figure1d_Welch_effects",
+      "rows_compared": 4,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "Figure3c_daywise_Welch_effects",
+      "rows_compared": 2,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "Growth_traits_TypeII",
+      "rows_compared": 16,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "Growth_traits_HC3",
+      "rows_compared": 16,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "Growth_traits_average_inoculation_effects",
+      "rows_compared": 4,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "RNA genes",
+      "rows_compared": 20449,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "RNA GO sets",
+      "rows_compared": 1705,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "Chemical global terms",
+      "rows_compared": 21,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "All primary LCMS contrasts",
+      "rows_compared": 37512,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "Primary interaction module",
+      "rows_compared": 21882,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "analysis": "Conditioned-medium curves",
+      "rows_compared": 2312,
+      "maximum_absolute_error": 0.0,
+      "tolerance": 1e-08
+    }
+  ]
+}

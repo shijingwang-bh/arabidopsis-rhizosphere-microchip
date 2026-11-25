@@ -1,0 +1,67 @@
+[
+  {
+    "figure": "Figure_1",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_2",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_3",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_4",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_5",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S1",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S2",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S3",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S4",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S5a",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S5b",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S6",
+    "pixel_identical_to_submission_reference": true,
+    "note": "Current source data, labels and experimental image assets retained"
+  },
+  {
+    "figure": "Figure_S7",
+    "pixel_identical_to_submission_reference": false,
+    "note": "Numeric vector redraw; original raster appearance preserved separately"
+  }
+]

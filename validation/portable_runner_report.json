@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "mode": "all",
+  "tested_from_relocated_extracted_archive": true,
+  "path_contained_spaces": true,
+  "steps": [
+    {
+      "step": "analyse_phenotypes.R",
+      "exit_code": 0,
+      "seconds": 0.62,
+      "log": "logs/01_analyse_phenotypes.log"
+    },
+    {
+      "step": "extract_OD_workbooks.py",
+      "exit_code": 0,
+      "seconds": 1.67,
+      "log": "logs/02_extract_OD_workbooks.log"
+    },
+    {
+      "step": "analyse_OD.R",
+      "exit_code": 0,
+      "seconds": 2.16,
+      "log": "logs/03_analyse_OD.log"
+    },
+    {
+      "step": "analyse_RNA.R",
+      "exit_code": 0,
+      "seconds": 47.82,
+      "log": "logs/04_analyse_RNA.log"
+    },
+    {
+      "step": "analyse_LCMS_global.R",
+      "exit_code": 0,
+      "seconds": 79.72,
+      "log": "logs/05_analyse_LCMS_global.log"
+    },
+    {
+      "step": "analyse_LCMS_interactions.R",
+      "exit_code": 0,
+      "seconds": 27.25,
+      "log": "logs/06_analyse_LCMS_interactions.log"
+    },
+    {
+      "step": "verify_reproduction.py",
+      "exit_code": 0,
+      "seconds": 1.46,
+      "log": "logs/07_verify_reproduction.log"
+    },
+    {
+      "step": "sync_results.py",
+      "exit_code": 0,
+      "seconds": 0.17,
+      "log": "logs/08_sync_results.log"
+    },
+    {
+      "step": "plot_platform_panels.R",
+      "exit_code": 0,
+      "seconds": 0.5,
+      "log": "logs/09_plot_platform_panels.log"
+    },
+    {
+      "step": "plot_current_figures.R",
+      "exit_code": 0,
+      "seconds": 34.66,
+      "log": "logs/10_plot_current_figures.log"
+    },
+    {
+      "step": "compose_figures.py",
+      "exit_code": 0,
+      "seconds": 3.74,
+      "log": "logs/11_compose_figures.log"
+    }
+  ],
+  "total_step_seconds": 199.76999999999998
+}

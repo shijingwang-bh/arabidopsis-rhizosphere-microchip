@@ -1,0 +1,12 @@
+{
+  "Figure_1": "pre_inoculation",
+  "Figure_2": "bacteria",
+  "Figure_3": "growth",
+  "Figure_4": "chemistry_global",
+  "Figure_5": "chemistry_interactions",
+  "Figure_S2": "rna_pca",
+  "Figure_S3": "rna_degs",
+  "Figure_S8": "rna_gene_sets",
+  "Figure_S6": "chemistry_gravity",
+  "shared/Conditioned_medium": "conditioned_medium"
+}

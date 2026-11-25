@@ -1,0 +1,14 @@
+package,version,source
+ggplot2,4.0.1,recorded actual plotting / Salmon sessionInfo
+patchwork,1.3.2,recorded actual plotting / Salmon sessionInfo
+magick,2.9.0,recorded actual plotting / Salmon sessionInfo
+ggrepel,0.9.6,recorded actual plotting / Salmon sessionInfo
+circlize,0.4.17,recorded actual plotting / Salmon sessionInfo
+edgeR,4.6.3,recorded actual plotting / Salmon sessionInfo
+limma,3.64.3,recorded actual plotting / Salmon sessionInfo
+statmod,1.5.0,recorded actual plotting / Salmon sessionInfo
+fgsea,1.34.2,recorded actual plotting / Salmon sessionInfo
+BiocParallel,1.42.1,recorded actual plotting / Salmon sessionInfo
+AnnotationDbi,1.70.0,recorded actual plotting / Salmon sessionInfo
+org.At.tair.db,3.21.0,recorded actual plotting / Salmon sessionInfo
+GO.db,3.21.0,recorded actual plotting / Salmon sessionInfo
