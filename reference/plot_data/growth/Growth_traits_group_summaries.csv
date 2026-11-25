@@ -1,0 +1,17 @@
+"metric","gravity","bacteria","n","mean","se"
+"Leaf area (cm²)","stationary_1g","uninoculated",10,0.1751,0.0196714400986698
+"Leaf fresh weight (mg)","stationary_1g","uninoculated",10,29.8,1.7625738755203
+"Root diameter (μm)","stationary_1g","uninoculated",3,133.696666666667,11.1736003349164
+"Root elongation (mm)","stationary_1g","uninoculated",10,22.22,0.76023388214125
+"Leaf area (cm²)","clinorotation","uninoculated",8,0.218875,0.0287025617945756
+"Leaf fresh weight (mg)","clinorotation","uninoculated",3,31.6666666666667,3.52766841475279
+"Root diameter (μm)","clinorotation","uninoculated",3,133.926666666667,7.18574128241323
+"Root elongation (mm)","clinorotation","uninoculated",8,21.0375,4.11247828913071
+"Leaf area (cm²)","stationary_1g","inoculated",4,0.23325,0.0298841513180482
+"Leaf fresh weight (mg)","stationary_1g","inoculated",5,45.6,4.2731721238443
+"Root diameter (μm)","stationary_1g","inoculated",5,178.762,3.73852564522433
+"Root elongation (mm)","stationary_1g","inoculated",5,23.28,1.48741386305224
+"Leaf area (cm²)","clinorotation","inoculated",4,0.21775,0.0200473398069004
+"Leaf fresh weight (mg)","clinorotation","inoculated",4,42,2.54950975679639
+"Root diameter (μm)","clinorotation","inoculated",4,170.695,15.1632299219746
+"Root elongation (mm)","clinorotation","inoculated",4,15.4,2.47015519080617

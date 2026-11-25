@@ -1,0 +1,17 @@
+"metric","term","df","f_value","p_value"
+"Root elongation (mm)","gravity",1,1.60150050082122,0.218361056813785
+"Root elongation (mm)","bacteria",1,0.454026657077888,0.507144724943667
+"Root elongation (mm)","gravity:bacteria",1,1.36885861497203,0.253989443611816
+"Root elongation (mm)","Residuals",23,NA,NA
+"Root diameter (μm)","gravity",1,0.222940752246648,0.646036605783978
+"Root diameter (μm)","bacteria",1,16.2786363753731,0.00196623967667633
+"Root diameter (μm)","gravity:bacteria",1,0.165497067880478,0.691948570842994
+"Root diameter (μm)","Residuals",11,NA,NA
+"Leaf fresh weight (mg)","gravity",1,0.0679306434575461,0.797332299757453
+"Leaf fresh weight (mg)","bacteria",1,22.1505071540561,0.00017595328668498
+"Leaf fresh weight (mg)","gravity:bacteria",1,0.763625695204628,0.393705905652362
+"Leaf fresh weight (mg)","Residuals",18,NA,NA
+"Leaf area (cm²)","gravity",1,0.946312869622012,0.34123477733275
+"Leaf area (cm²)","bacteria",1,1.09846712214437,0.30598118812539
+"Leaf area (cm²)","gravity:bacteria",1,1.10482819330983,0.304618321640571
+"Leaf area (cm²)","Residuals",22,NA,NA

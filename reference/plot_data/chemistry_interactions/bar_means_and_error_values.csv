@@ -1,0 +1,9 @@
+feature_id,group,gravity,bacteria,day,n,mean_log2,se,ci_low,ci_high,mean_exported_intensity,error_type
+neg_3047,clinorotation_inoculated_day7,clinorotation,inoculated,7,6,10.8709052900683,0.189116257000941,10.3847664749982,11.3570441051385,1952.66618295505,unadjusted 95% t interval
+neg_3047,clinorotation_uninoculated_day7,clinorotation,uninoculated,7,5,12.5600761169608,0.22500111799986,11.935372864226,13.1847793696955,6346.70924565288,unadjusted 95% t interval
+neg_3047,stationary_1g_inoculated_day7,stationary_1g,inoculated,7,5,7.10860534401973,0.346329553884479,6.14704034935183,8.07017033868763,155.245533520503,unadjusted 95% t interval
+neg_3047,stationary_1g_uninoculated_day7,stationary_1g,uninoculated,7,5,11.6323393835352,0.245990138653959,10.9493612671425,12.3153174999279,3352.00326662125,unadjusted 95% t interval
+pos_5231,clinorotation_inoculated_day7,clinorotation,inoculated,7,6,11.254092360915,0.281986213606789,10.5292237223176,11.9789609995125,2671.37607385944,unadjusted 95% t interval
+pos_5231,clinorotation_uninoculated_day7,clinorotation,uninoculated,7,5,8.72196489900328,0.316722188196006,7.84260312987894,9.60132666812761,460.360870130261,unadjusted 95% t interval
+pos_5231,stationary_1g_inoculated_day7,stationary_1g,inoculated,7,5,6.55298161076737,0.377673610493842,5.50439156354937,7.60157165798538,106.765863812139,unadjusted 95% t interval
+pos_5231,stationary_1g_uninoculated_day7,stationary_1g,uninoculated,7,5,8.24908144956552,0.310600384331788,7.38671653281497,9.11144636631607,332.119789929527,unadjusted 95% t interval

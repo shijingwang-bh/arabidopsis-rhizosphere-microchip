@@ -1,0 +1,82 @@
+"metric","gravity","replicate","value"
+"Lateral root number","stationary_1g",1,2
+"Lateral root number","stationary_1g",2,6
+"Lateral root number","stationary_1g",3,9
+"Lateral root number","stationary_1g",4,2
+"Lateral root number","stationary_1g",5,2
+"Lateral root number","stationary_1g",6,9
+"Lateral root number","stationary_1g",7,7
+"Lateral root number","stationary_1g",8,9
+"Lateral root number","stationary_1g",9,5
+"Lateral root number","stationary_1g",10,7
+"Lateral root number","stationary_1g",11,8
+"Lateral root number","stationary_1g",12,8
+"Lateral root number","clinorotation",1,1
+"Lateral root number","clinorotation",2,17
+"Lateral root number","clinorotation",3,15
+"Lateral root number","clinorotation",4,13
+"Lateral root number","clinorotation",5,11
+"Lateral root number","clinorotation",6,11
+"Lateral root number","clinorotation",7,14
+"Lateral root number","clinorotation",8,10
+"Lateral root number","clinorotation",9,23
+"Lateral root number","clinorotation",10,13
+"Lateral root number","clinorotation",11,10
+"Lateral root number","clinorotation",12,8
+"Lateral root number","clinorotation",13,14
+"Lateral root number","clinorotation",14,9
+"Root length (mm)","stationary_1g",1,45.2
+"Root length (mm)","stationary_1g",2,43
+"Root length (mm)","stationary_1g",3,36.5
+"Root length (mm)","stationary_1g",4,35.6
+"Root length (mm)","stationary_1g",5,40
+"Root length (mm)","stationary_1g",6,36.3
+"Root length (mm)","stationary_1g",7,46
+"Root length (mm)","stationary_1g",8,36.4
+"Root length (mm)","stationary_1g",9,42.5
+"Root length (mm)","stationary_1g",10,43.1
+"Root length (mm)","clinorotation",1,38
+"Root length (mm)","clinorotation",2,37
+"Root length (mm)","clinorotation",3,44
+"Root length (mm)","clinorotation",4,41.5
+"Root length (mm)","clinorotation",5,39
+"Root length (mm)","clinorotation",6,47
+"Root length (mm)","clinorotation",7,50.5
+"Root length (mm)","clinorotation",8,41.5
+"Root length (mm)","clinorotation",9,43
+"Root length (mm)","clinorotation",10,37
+"Leaf area (cm²)","stationary_1g",1,0.159
+"Leaf area (cm²)","stationary_1g",2,0.195
+"Leaf area (cm²)","stationary_1g",3,0.191
+"Leaf area (cm²)","stationary_1g",4,0.16
+"Leaf area (cm²)","stationary_1g",5,0.165
+"Leaf area (cm²)","clinorotation",1,0.175
+"Leaf area (cm²)","clinorotation",2,0.199
+"Leaf area (cm²)","clinorotation",3,0.167
+"Leaf area (cm²)","clinorotation",4,0.173
+"Leaf area (cm²)","clinorotation",5,0.163
+"Leaf area (cm²)","clinorotation",6,0.161
+"Leaf fresh weight (mg)","stationary_1g",1,1.8
+"Leaf fresh weight (mg)","stationary_1g",2,2.5
+"Leaf fresh weight (mg)","stationary_1g",3,2.5
+"Leaf fresh weight (mg)","stationary_1g",4,2.5
+"Leaf fresh weight (mg)","stationary_1g",5,5
+"Leaf fresh weight (mg)","stationary_1g",6,2.7
+"Leaf fresh weight (mg)","stationary_1g",7,2.5
+"Leaf fresh weight (mg)","stationary_1g",8,3.1
+"Leaf fresh weight (mg)","stationary_1g",9,2.2
+"Leaf fresh weight (mg)","stationary_1g",10,2.3
+"Leaf fresh weight (mg)","stationary_1g",11,3
+"Leaf fresh weight (mg)","stationary_1g",12,1.9
+"Leaf fresh weight (mg)","clinorotation",1,2.6
+"Leaf fresh weight (mg)","clinorotation",2,2.4
+"Leaf fresh weight (mg)","clinorotation",3,1.8
+"Leaf fresh weight (mg)","clinorotation",4,1.6
+"Leaf fresh weight (mg)","clinorotation",5,2
+"Leaf fresh weight (mg)","clinorotation",6,2.5
+"Leaf fresh weight (mg)","clinorotation",7,2.4
+"Leaf fresh weight (mg)","clinorotation",8,2.3
+"Leaf fresh weight (mg)","clinorotation",9,2.9
+"Leaf fresh weight (mg)","clinorotation",10,2.6
+"Leaf fresh weight (mg)","clinorotation",11,2.4
+"Leaf fresh weight (mg)","clinorotation",12,2

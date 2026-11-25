@@ -1,0 +1,8 @@
+"contrast","clinorotation_inoculated_day3","clinorotation_inoculated_day7","clinorotation_uninoculated_day3","clinorotation_uninoculated_day7","stationary_1g_inoculated_day3","stationary_1g_inoculated_day7","stationary_1g_uninoculated_day3","stationary_1g_uninoculated_day7"
+"inoculation_stationary_day3",0,0,0,0,1,0,-1,0
+"inoculation_clinorotation_day3",1,0,-1,0,0,0,0,0
+"inoculation_stationary_day7",0,0,0,0,0,1,0,-1
+"inoculation_clinorotation_day7",0,1,0,-1,0,0,0,0
+"interaction_day3",1,0,-1,0,-1,0,1,0
+"interaction_day7",0,1,0,-1,0,-1,0,1
+"gravity_inoculation_time",-1,1,1,-1,1,-1,-1,1

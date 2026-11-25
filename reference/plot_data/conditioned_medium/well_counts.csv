@@ -1,0 +1,9 @@
+collection_day,group,source_wells,retained_wells,time_points,valid_inoculated_wells,unseeded_audit_wells,replicate_type
+3,LB_control,5,5,289,5,0,technical assay wells
+3,MS_control,5,5,289,5,0,technical assay wells
+3,clinorotation,4,4,289,4,0,technical assay wells
+3,stationary_1g,4,4,289,4,0,technical assay wells
+7,LB_control,5,5,289,5,0,technical assay wells
+7,MS_control,5,5,289,5,0,technical assay wells
+7,clinorotation,5,4,289,4,1,technical assay wells
+7,stationary_1g,5,5,289,5,0,technical assay wells

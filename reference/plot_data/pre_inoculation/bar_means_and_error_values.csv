@@ -1,0 +1,9 @@
+metric,gravity,n,mean,se,comparison_label,error_type
+Lateral root number,stationary_1g,12,6.16666666666667,0.805599093215663,1 g,SE
+Leaf area (cm²),stationary_1g,5,0.174,0.0078485667481394,Control,SE
+Leaf fresh weight (mg),stationary_1g,12,2.66666666666667,0.239106079328229,Control,SE
+Root length (mm),stationary_1g,10,40.46,1.26510429960889,Control,SE
+Lateral root number,clinorotation,14,12.0714285714286,1.32790955981877,sμg,SE
+Leaf area (cm²),clinorotation,6,0.173,0.0056568542494923,Chip-grown,SE
+Leaf fresh weight (mg),clinorotation,12,2.29166666666667,0.107631760923976,Chip-grown,SE
+Root length (mm),clinorotation,10,41.85,1.40445719051881,Chip-grown,SE

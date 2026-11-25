@@ -1,0 +1,5 @@
+"feature_id","J7","J7_q","J7_pass","T","T_q","T_pass","putative_name","qc_cv","mass_error_ppm","any_group_half_at_or_below_one","strict_annotation_diagnostic","hmdb_superclass","kegg_id","hmdb_id","minus_log10_J7_q","screen_group","selected_example","annotation_subset","display_name","plot_label","label_x","label_y"
+"pos_5231",4.22822730070991,0.00234275878692599,TRUE,2.19421643814897,0.500236052265184,FALSE,"Isorhamnetin 3-O-[b-D-glucopyranosyl-(1->2)-a-L-rhamnopyranoside]",0.0173555892484946,4.09260910630644,FALSE,TRUE,"Phenylpropanoids and polyketides","--","HMDB0037085",2.63027242454849,"Positive",TRUE,TRUE,"Isorhamnetin glycoside","Isorhamnetin
+glycoside",5.2,3.85
+"neg_3047",2.83456321262304,0.00728030597888537,TRUE,2.62849389555996,0.233937608842914,FALSE,"1-O-Sinapoyl-beta-D-glucose",0.030399427310633,-2.60838315553839,FALSE,TRUE,"Phenylpropanoids and polyketides","C01175","HMDB0302379",2.13785036764452,"Positive",TRUE,TRUE,"Sinapoyl glucose","Sinapoyl
+glucose",10,3.2
