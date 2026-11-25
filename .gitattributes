@@ -1,0 +1,10 @@
+# Preserve measurement/reference bytes and their checksums on all platforms.
+* -text
+*.py text eol=lf
+*.R text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.cff text eol=lf
+*.yml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
