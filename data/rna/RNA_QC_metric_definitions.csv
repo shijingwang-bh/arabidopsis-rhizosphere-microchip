@@ -1,0 +1,4 @@
+metric,meaning,unit,provenance,relation_to_fractional_input_matrix
+Clean_pairs,Clean read pairs as supplied by the author,read pairs,Author feedback Q09,not established
+Salmon_mapping_percent,Author-labelled Salmon mapping percentage; not relabelled as HISAT2 alignment,percent,Author feedback Q09,not established
+FC_assigned_percent,Author-labelled featureCounts assignment percentage; not total alignment rate,percent,Author feedback Q09,not established

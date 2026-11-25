@@ -1,0 +1,123 @@
+options(stringsAsFactors=FALSE,scipen=10)
+if(.Platform$OS.type=='windows')invisible(Sys.setlocale('LC_CTYPE','English_United States.utf8'))
+args<-commandArgs(TRUE);pkg<-normalizePath(args[1],winslash='/');run<-normalizePath(args[2],winslash='/')
+out<-file.path(run,'results/chemistry_interactions');f4<-file.path(run,'results/chemistry_global')
+for(d in c('data','tables','qa'))dir.create(file.path(out,d),recursive=TRUE,showWarnings=FALSE)
+suppressPackageStartupMessages(library(jsonlite))
+write_tab<-function(x,n)write.csv(x,file.path(out,'tables',paste0(n,'.csv')),row.names=FALSE,na='',fileEncoding='UTF-8')
+focus_ct<-c('interaction_day3','interaction_day7','gravity_inoculation_time')
+o4<-readRDS(file.path(f4,'data/figure4_analysis.rds'))
+original_reference<-read.csv(file.path(f4,'tables/feature_contrasts_original_named.csv'))
+full_reference<-read.csv(file.path(f4,'tables/feature_contrasts_all_export_QC30.csv'))
+ref<-list(primary=o4$primary[o4$primary$contrast%in%focus_ct,],original=original_reference[original_reference$contrast%in%focus_ct,],
+ full=full_reference[full_reference$contrast%in%focus_ct,],meta=o4$meta,feature=o4$feature[o4$feature$named_family,],global=o4$global,
+ contrasts=read.csv(file.path(f4,'tables/contrast_definitions.csv'),check.names=FALSE))
+read_export<-function(n){
+  txt<-readLines(file.path(pkg,"data/lcms",n),warn=FALSE,encoding="bytes")
+  txt<-iconv(txt,from="GB18030",to="UTF-8",sub="byte");stopifnot(!anyNA(txt))
+  read.delim(text=paste(txt,collapse="\n"),quote="",comment.char="",check.names=FALSE,encoding="UTF-8")
+}
+message("Recompute contrasts from the named intensity export")
+raw<-read_export("metabolites_exp.xls");ann<-read_export("metabolites_full_table.xls")
+names(raw)[1]<-names(ann)[1]<-"feature_id"
+meta<-ref$meta;feature<-ref$feature[match(raw$feature_id,ref$feature$feature_id),]
+stopifnot(identical(raw$feature_id,feature$feature_id),!anyDuplicated(raw$feature_id),nrow(meta)==41)
+feature$lipid_category<-ann$`CATEGORY(lipidmaps)`[match(feature$feature_id,ann$feature_id)]
+feature$lipid_main_class<-ann$`MAIN_CLASS(lipidmaps)`[match(feature$feature_id,ann$feature_id)]
+feature$annotation_review_note<-""
+feature$annotation_review_note[feature$feature_id=="pos_4207"]<-"Exported anthracycline-like name conflicts with exported nucleotide taxonomy; not resolved by database ID alone."
+feature$annotation_review_note[feature$feature_id=="neg_3509"]<-"Exported tannin subclass is inconsistent with a flavonoid glycoside name; broad class retained as exported."
+Xraw<-as.matrix(raw[,meta$sample]);storage.mode(Xraw)<-"double";rownames(Xraw)<-raw$feature_id
+stopifnot(all(is.finite(Xraw)),all(Xraw>=0),sum(feature$primary)==3126)
+L<-log2(Xraw+1);groups<-sort(unique(meta$group))
+simple_ct<-c("inoculation_stationary_day3","inoculation_clinorotation_day3","inoculation_stationary_day7","inoculation_clinorotation_day7")
+ct_order<-c(simple_ct,focus_ct)
+C<-as.matrix(ref$contrasts[match(ct_order,ref$contrasts$contrast),groups]);rownames(C)<-ct_order
+contrast_stats<-function(z,md,family){
+  mm<-sapply(groups,function(g)rowMeans(z[,md$group==g,drop=FALSE]))
+  vv<-sapply(groups,function(g)apply(z[,md$group==g,drop=FALSE],1,var))
+  ns<-sapply(groups,function(g)sum(md$group==g))
+  do.call(rbind,lapply(rownames(C),function(ct){
+    co<-C[ct,];est<-as.vector(mm%*%co);vterms<-sweep(vv,2,co^2/ns,"*")
+    s2<-rowSums(vterms);df<-s2^2/rowSums(sweep(vterms^2,2,ns-1,"/"));se<-sqrt(s2)
+    t<-est/se;p<-2*pt(-abs(t),df);p[!is.finite(p)]<-1;q<-p.adjust(p,"BH");ci<-qt(.975,df)*se
+    data.frame(family=family,contrast=ct,feature_id=rownames(z),log2_effect=est,se=se,df=df,t=t,p=p,q=q,
+      ci95_low=est-ci,ci95_high=est+ci,pass=q<.05&abs(est)>log2(1.5))
+  }))
+}
+primary<-contrast_stats(L[feature$primary,,drop=FALSE],meta,"primary_named_QC30")
+original<-contrast_stats(L,meta,"original_named")
+verification<-do.call(rbind,lapply(c("primary","original"),function(nm){
+  a<-get(nm);b<-ref[[nm]];k<-match(paste(b$contrast,b$feature_id),paste(a$contrast,a$feature_id))
+  stopifnot(!anyNA(k))
+  data.frame(family=nm,metric=c("log2_effect","se","df","p","q"),maximum_difference=sapply(c("log2_effect","se","df","p","q"),function(v){
+    stopifnot(identical(is.na(a[[v]][k]),is.na(b[[v]])));max(abs(a[[v]][k]-b[[v]]),na.rm=TRUE)}))
+}))
+stopifnot(all(verification$maximum_difference<1e-10))
+write_tab(verification,"figure4_interaction_reproduction")
+write_tab(primary,"all_primary_feature_contrasts")
+write_tab(feature,"feature_annotations_and_quality")
+write_tab(meta,"sample_metadata")
+write_tab(data.frame(contrast=rownames(C),C,check.names=FALSE),"contrast_definitions")
+get_ct<-function(ct,stats=primary)stats[stats$contrast==ct,]
+T<-get_ct("gravity_inoculation_time");J3<-get_ct("interaction_day3");J7<-get_ct("interaction_day7")
+stopifnot(identical(T$feature_id,J3$feature_id),identical(T$feature_id,J7$feature_id),max(abs(T$log2_effect-J7$log2_effect+J3$log2_effect))<1e-10)
+scatter<-data.frame(feature_id=T$feature_id,J3=J3$log2_effect,J3_q=J3$q,J3_pass=J3$pass,J7=J7$log2_effect,J7_q=J7$q,J7_pass=J7$pass,
+  T=T$log2_effect,T_p=T$p,T_q=T$q,T_pass=T$pass)
+hits<-merge(T[T$pass,],feature,by="feature_id",sort=FALSE);hits<-hits[order(hits$q,hits$feature_id),]
+stopifnot(nrow(hits)==5)
+write_tab(scatter,"panel_a_interaction_time_scatter")
+write_tab(hits,"panel_b_all_temporal_interaction_hits")
+ids<-c("pos_5231","neg_3047","neg_3699")
+candidate_stats<-merge(primary[primary$feature_id%in%ids,],feature,by="feature_id",sort=FALSE)
+write_tab(candidate_stats,"panel_d_candidate_all_contrasts")
+raw_long<-function(ids){
+  do.call(rbind,lapply(ids,function(id){
+    data.frame(feature_id=id,meta,exported_intensity=as.numeric(Xraw[id,meta$sample]),log2_intensity=as.numeric(L[id,meta$sample]),
+      putative_name=feature$putative_name[match(id,feature$feature_id)])
+  }))
+}
+candidate_points<-raw_long(ids);temporal_points<-raw_long(hits$feature_id)
+write_tab(candidate_points,"candidate_samples_all_days")
+write_tab(temporal_points,"temporal_hit_samples_all_days")
+sample_summary<-function(dd)do.call(rbind,lapply(split(dd,paste(dd$feature_id,dd$group)),function(d){
+  m<-mean(d$log2_intensity);se<-sd(d$log2_intensity)/sqrt(nrow(d));ci<-qt(.975,nrow(d)-1)*se
+  data.frame(feature_id=d$feature_id[1],group=d$group[1],gravity=d$gravity[1],bacteria=d$bacteria[1],day=d$day[1],
+    n=nrow(d),mean_log2=m,se=se,ci_low=m-ci,ci_high=m+ci,mean_exported_intensity=mean(d$exported_intensity))
+}))
+candidate_summary<-sample_summary(candidate_points);temporal_summary<-sample_summary(temporal_points)
+write_tab(candidate_summary,"candidate_group_means_and_CI")
+write_tab(temporal_summary,"temporal_hit_group_means_and_CI")
+
+valid<-function(x)!is.na(x)&!trimws(x)%in%c("","--","-","NA")
+keyfun<-function(i){
+  for(field in c("hmdb_id","kegg_id")){
+    pattern<-if(field=="hmdb_id")"HMDB[0-9]+" else "C[0-9]{5}"
+    s<-feature[[field]][i];if(is.na(s))next
+    ids<-regmatches(s,gregexpr(pattern,s))[[1]]
+    if(length(ids))return(paste0(field,":",paste(sort(unique(ids)),collapse="|")))
+  }
+  paste0("name:",tolower(trimws(feature$putative_name[i])))
+}
+feature$annotation_key<-vapply(seq_len(nrow(feature)),keyfun,character(1))
+qorder<-order(feature$qc_cv,abs(feature$mass_error_ppm),feature$feature_id,na.last=TRUE)
+primary_order<-qorder[feature$primary[qorder]]
+representative<-rep(FALSE,nrow(feature));representative[primary_order[!duplicated(feature$annotation_key[primary_order])]]<-TRUE
+feature$primary_annotation_representative<-representative
+write_tab(feature,"feature_annotations_and_quality")
+eligibilities<-list(
+ primary=feature$primary,
+ original_named=rep(TRUE,nrow(feature)),
+ annotation_representatives=representative,
+ no_low_value_flag=feature$primary&!feature$any_group_half_at_or_below_one,
+ ppm5_and_database_ID=feature$primary&feature$strict_annotation_diagnostic,
+ original_ppm5_and_database_ID=feature$strict_annotation_diagnostic)
+day3_ids<-c('neg_5318','pos_12437')
+day3_points<-raw_long(day3_ids);day3_points<-day3_points[day3_points$day==3,]
+day3_stats<-merge(primary[primary$feature_id%in%day3_ids&primary$contrast%in%c('inoculation_stationary_day3','inoculation_clinorotation_day3','interaction_day3'),],feature,by='feature_id',sort=FALSE)
+write_tab(day3_points,'day3_example_observations');write_tab(day3_stats,'day3_example_statistics')
+write_tab(sample_summary(day3_points),'day3_example_group_summary')
+saveRDS(list(meta=meta,feature=feature,primary=primary,scatter=scatter,hits=hits,
+ candidate_points=candidate_points,candidate_summary=candidate_summary,candidate_stats=candidate_stats),file.path(out,'data/interaction_analysis.rds'))
+capture.output(sessionInfo(),file=file.path(out,'qa/sessionInfo.txt'))
+cat('PASS: 137 day-7 interaction hits, five temporal hits; full-family BH retained.\n')
