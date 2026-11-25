@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.Rhistory
+.RData
+.Ruserdata
+.venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+/results/
+/runs/
+/outputs/
+/renv/library/
+/renv/staging/
